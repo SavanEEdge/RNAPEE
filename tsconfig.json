@@ -1,3 +1,35 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+   "strict": true,
+   "baseUrl": ".",
+   "paths": {
+    "@src/*": ["src/*"]
+   },
+   "target": "esnext",
+   "lib": ["dom", "DOM.Iterable", "esnext"],
+   "jsx": "react-native",
+   "moduleResolution": "node",
+   "esModuleInterop": true,
+   "types": ["jest", "jest-require"],
+   "typeRoots": [
+     "./ts-declarations",
+     "./node_modules/@types",
+     "../../node_modules/@types",
+   ],
+   "sourceMap": true,
+   "declaration": true,
+   "declarationMap": true,
+   "inlineSources": true,
+   "strictNullChecks": true,
+   "strictPropertyInitialization": true,
+   "strictFunctionTypes": true,
+   "skipLibCheck": true,
+   "noImplicitThis": true,
+   "noImplicitReturns": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ]
 }
